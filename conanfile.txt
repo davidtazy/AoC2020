@@ -1,0 +1,12 @@
+[requires]
+#sfml/2.5.1@bincrafters/stable
+
+[build_requires]
+catch2/2.12.1@
+debug_assert/1.3.3@
+
+[generators]
+cmake_paths
+cmake_find_package
+
+[options]
