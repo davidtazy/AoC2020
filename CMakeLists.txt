@@ -13,7 +13,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 # ########## advent of Application ###################
 
-add_executable(adventofcode day01.cpp day02.cpp day03.cpp main.cpp)
+add_executable(adventofcode day01.cpp day02.cpp day03.cpp day04.cpp main.cpp)
 target_link_libraries(adventofcode Catch2::Catch2)
 target_compile_definitions(adventofcode
                            PUBLIC DATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}")
