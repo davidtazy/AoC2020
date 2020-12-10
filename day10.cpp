@@ -37,12 +37,13 @@ std::tuple<int, int> diff_and_find_number_of_1_and_3(
 
 template <typename T>
 bool is_valid(T& slice) {
+  // only continuous values
   return ranges::adjacent_find(slice, [](auto a, auto b) { return b - a != 1; }) == slice.end();
 }
 
 template <typename T>
 int count_possibilities(T& slice) {
-  // std::cout << is_valid(slice) << " size: " << slice.size() << '\n';
+  assert(is_valid(slice));
 
   switch (slice.size()) {
     case 3:
