@@ -5,7 +5,7 @@ project(adventofcode)
 include(${CMAKE_BINARY_DIR}/conan_paths.cmake)
 
 find_package(Catch2 REQUIRED)
-find_package(range-v3)
+find_package(range-v3 REQUIRED)
 
 # ########## modern C++ flags######################
 set(CMAKE_CXX_STANDARD 17)
@@ -31,10 +31,3 @@ target_compile_definitions(test_adventofcode
                            PUBLIC DATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}")
 
 # #######################  range v3###################################
-
-if(range-v3_FOUND)
-  add_executable(test_range test_range.cpp main.cpp)
-  target_link_libraries(test_range Catch2::Catch2 range-v3::range-v3)
-  target_compile_definitions(test_range
-                             PUBLIC DATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}")
-endif()
