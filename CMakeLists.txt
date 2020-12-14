@@ -29,6 +29,7 @@ add_executable(
   day11.cpp
   day12.cpp
   day13.cpp
+  day14.cpp
   main.cpp)
 target_link_libraries(test_adventofcode Catch2::Catch2 range-v3::range-v3)
 target_compile_definitions(test_adventofcode
